@@ -3,6 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import userRoute from "./routes/userRoute.js";
+import mealRoute from "./routes/mealRoute.js";
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ const MONGO_URI = process.env.MONGO_URI;
 const PORT = process.env.PORT || 5555;
 
 app.use("/users", userRoute);
+app.use("/meals", mealRoute);
 
 mongoose
   .connect(MONGO_URI)
