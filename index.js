@@ -1,9 +1,10 @@
 import dotenv from "dotenv";
-dotenv.config("/home/mork/Documents/meal-planner/backend/.env");
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import userRoute from "./routes/userRoute.js";
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
